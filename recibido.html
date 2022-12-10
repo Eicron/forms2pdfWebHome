@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,31 +29,49 @@
                                 <label for="dia">Fecha: </label>
                                 <input type="date" name="dia" id="dia" value="2022-12-08" min="2022-01-01" max="2050-12-31"  />
                             </div>
+                            <div class="form-group">
+                                <label for="noRecibido">Numero de Folio:</label>
+                                <input type="text" name="noRecibido" id="noRecibido" required/>
+                            </div>  
                         </div>
-                        <div class="form-row">
-                                <div class="form-group">
-                                    <label for="noRecibido">Numero de Folio:</label>
-                                    <input type="text" name="noRecibido" id="noRecibido" required/>
-                                </div>                            
-                                <div class="form-group">
-                                    <label for="cantidad">La cantidad de:</label>
-                                    <input type="text" name="cantidad" id="cantidad" required/>
-                                </div>
+
+
+                        <div class="form-row">                                                      
+                            <div class="form-group">
+                                <label for="cantidad">La cantidad de (numerico):</label>
+                                <input type="text" name="cantidad" id="cantidad" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="cantidad">La cantidad de (en letra):</label>
+                                <input type="text" name="cantidad" id="cantidad" required/>
+                            </div>
                         </div>
+
+
                         <div class="form-radio">
                             <label for="" class="radio-label">Tipo de concepto:</label>                            
                             <div class="form-radio-item">
                                 <input type="radio" name="otro" id="otro" checked >
-                                <label for="otro">Especificar</label>
+                                <label for="otro">Instalacion</label>
                                 <span class="check"></span>
                             </div>
 
                             <div class="form-radio-item">
-                                <input type="radio" name="tipo" id="tipo" >
-                                <label for="tipo">Por cambio de domicilio</label>
+                                <input type="radio" name="cambioDomicilio" id="cambioDomicilio" checked >
+                                <label for="cambioDomicilio">Cambio de domicilio</label>
                                 <span class="check"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-radio-item">
+                                    <input type="radio" name="tipo" id="tipo" >
+                                    <label for="tipo">Por cambio de domicilio</label>
+                                    <span class="check"></span>    
+                                </div>
 
                             </div>
+
+                            
                             
                         </div>
 
@@ -68,11 +86,17 @@
                         </div>                                             
                         
                         
-                        <div class="form-submit">
-                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        <div class="form-submit">                            
+                            <div class="botones">
+                                <a href="home.html" class="ancor" >Contratos</a>  
+                                <div>
+                                    <a href="?" class="limpiar" id="reset" >limpiar</a>
+                                    <input type="submit" value="Enviar" class="submit" name="submit" id="submit" />
+                                </div>                                                          
+                            </div>                                                          
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
